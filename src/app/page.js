@@ -141,7 +141,7 @@ export default function Home() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 leading-tight">
               <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 <Typewriter
-                  words={["Hi, I'm Sourav"]}
+                  words={["Hi, I'm Debaneek"]}
                   loop={false}
                   cursor
                   cursorStyle="_"
@@ -322,7 +322,7 @@ export default function Home() {
             <div className="flex flex-col gap-4">
               {/* Email */}
               <a
-                href="mailto:mishra.sourav79@gmail.com"
+                href="mailto:debaneekchhotaray@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-lg bg-slate-700/50 hover:bg-slate-700 transition-colors border border-slate-600 hover:border-cyan-500/50 group"
@@ -330,13 +330,13 @@ export default function Home() {
                 <Mail size={24} className="text-cyan-400" />
                 <div>
                   <p className="font-semibold text-white">Email</p>
-                  <p className="text-sm text-slate-400 group-hover:text-cyan-400 transition-colors font-mono">mishra.sourav79@gmail.com</p>
+                  <p className="text-sm text-slate-400 group-hover:text-cyan-400 transition-colors font-mono">debaneekchhotaray@gmail.com</p>
                 </div>
               </a>
 
               {/* GitHub */}
               <a
-                href="https://github.com/souravmishra7456"
+                href="https://github.com/Debaneek31"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-lg bg-slate-700/50 hover:bg-slate-700 transition-colors border border-slate-600 hover:border-cyan-500/50 group"
@@ -344,13 +344,13 @@ export default function Home() {
                 <Github size={24} className="text-white" />
                 <div>
                   <p className="font-semibold text-white">GitHub</p>
-                  <p className="text-sm text-slate-400 group-hover:text-cyan-400 transition-colors font-mono">/souravmishra7456</p>
+                  <p className="text-sm text-slate-400 group-hover:text-cyan-400 transition-colors font-mono">/Debaneek31</p>
                 </div>
               </a>
 
               {/* LinkedIn */}
               <a
-                href="https://www.linkedin.com/in/sourav456/"
+                href="https://www.linkedin.com/in/debaneek3112"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-lg bg-slate-700/50 hover:bg-slate-700 transition-colors border border-slate-600 hover:border-cyan-500/50 group"
@@ -358,7 +358,7 @@ export default function Home() {
                 <Linkedin size={24} className="text-cyan-400" />
                 <div>
                   <p className="font-semibold text-white">LinkedIn</p>
-                  <p className="text-sm text-slate-400 group-hover:text-cyan-400 transition-colors">Sourav Mishra</p>
+                  <p className="text-sm text-slate-400 group-hover:text-cyan-400 transition-colors">Debaneek Chhotaray</p>
                 </div>
               </a>
             </div>

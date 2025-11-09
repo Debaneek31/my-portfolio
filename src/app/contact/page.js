@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { Mail, User, MessageSquare, Send, MapPin, Phone, Globe, Github, Linkedin, CheckCircle, Instagram, X, Twitter } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -140,6 +142,8 @@ const Contact = () => {
 
     return (
         <div className="min-h-screen md:pt-24 bg-gradient-to-br from-slate-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
+            <Navbar />
+
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-16">

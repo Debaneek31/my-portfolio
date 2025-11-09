@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import { MapPin, Calendar, Award, GraduationCap } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+
 
 const educationData = [
     {
@@ -59,6 +61,8 @@ export default function EnhancedEducationPage() {
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-pink-400/20 to-orange-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
             </div>
+            <Navbar />
+
 
             <div className="relative max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
                 {/* Header Section */}

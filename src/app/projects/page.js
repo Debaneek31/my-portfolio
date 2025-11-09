@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { Github, ExternalLink, Code, MessageSquare, Smartphone, Calendar, Monitor, Users, Shield, Bell, Zap, Database, Globe } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+
 
 const Projects = () => {
     const projects = [
@@ -100,6 +102,8 @@ const Projects = () => {
 
     return (
         <div className="min-h-screen pt-16 bg-gradient-to-br from-slate-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
+            <Navbar />
+
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-16">

@@ -43,15 +43,15 @@ const Navbar = () => {
                     <div className="flex items-center justify-between h-20">
                         <div className="flex-shrink-0">
                             <Link href="/" className="text-cyan-400 font-mono font-bold text-xl hover:text-cyan-300 transition-colors">
-                                &lt;SM/&gt;
+                                &lt;DC/&gt;
                             </Link>
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-1">
                                 {navLinks.map((link) => (
-                                    <Link 
-                                        key={link.title} 
-                                        href={link.href} 
+                                    <Link
+                                        key={link.title}
+                                        href={link.href}
                                         className="text-slate-300 hover:text-cyan-400 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 cursor-pointer hover:bg-slate-800/50 relative group"
                                     >
                                         {link.title}

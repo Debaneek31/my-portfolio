@@ -5,6 +5,8 @@ import {
     Calendar, MapPin, Code, Shield, FileText,
     BarChart3, Wrench, Package, Database, BarChart4, FileSpreadsheet
 } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+
 
 const WorkExperience = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -106,6 +108,8 @@ const WorkExperience = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 md:pt-18 py-12 px-4 sm:px-6 lg:px-8">
+            <Navbar />
+
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-12">
