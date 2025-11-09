@@ -168,7 +168,7 @@ const Contact = () => {
         {
             icon: <Twitter className="w-5 h-5" />,
             label: "Twitter",
-            href: "https://x.com/SouravMishra79",
+            href: "https://x.com/DebaneekC",
             color: "hover:text-cyan-400"
         }
     ];
@@ -267,8 +267,8 @@ const Contact = () => {
                         </span>
                     </h1>
                     <p className="text-lg sm:text-xl text-slate-300 font-mono max-w-2xl mx-auto">
-                        Have a project in mind or want to collaborate? I'd love to hear from you.
-                        Send me a message and let's start a conversation.
+                        Thinking of a new project or partnership? Let’s turn your vision into reality 
+                        Send me a message and let’s create something awesome!.
                     </p>
                 </div>
 
