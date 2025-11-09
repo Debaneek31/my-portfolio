@@ -267,7 +267,7 @@ const Contact = () => {
                         </span>
                     </h1>
                     <p className="text-lg sm:text-xl text-slate-300 font-mono max-w-2xl mx-auto">
-                        Thinking of a new project or partnership? Let’s turn your vision into reality 
+                        Think of a new project or partnership? Let’s turn your vision into reality gu
                         Send me a message and let’s create something awesome!.
                     </p>
                 </div>
