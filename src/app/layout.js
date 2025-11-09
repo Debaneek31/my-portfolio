@@ -2,13 +2,13 @@ import './globals.css'
 import Navbar from '../components/Navbar'
 
 export const metadata = {
-  title: 'Sourav Mishra | Portfolio',
+  title: 'Debaneek Chhotaray | Portfolio',
   description: 'Full Stack developer crafting responsive UIs and interactive web apps. Explore my projects, skills, and experience.',
   keywords: ['Sourav Mishra', 'Frontend Developer', 'React Developer', 'Web Portfolio', 'JavaScript Projects', 'TailwindCSS', 'Next.js Developer'],
   authors: [{ name: 'Sourav Mishra', url: 'https://sourav-portfolio-psi.vercel.app' }],
   creator: 'Sourav Mishra',
   openGraph: {
-    title: 'Sourav Mishra | Portfolio',
+    title: 'Debaneek Chhotaray | Portfolio',
     description: 'A showcase of my web development projects and skills.',
     url: 'https://sourav-portfolio-psi.vercel.app/',
     siteName: 'Sourav Portfolio',
