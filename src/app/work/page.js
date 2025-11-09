@@ -345,100 +345,10 @@ const WorkExperience = () => {
                 </div>
 
                 {/* Internship Certificate Section */}
-                <div className={`mt-12 bg-slate-800/60 backdrop-blur-sm rounded-xl border border-slate-700/50 p-8 hover:border-cyan-500/50 transition-all duration-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '600ms' }}>
-                    <div className="text-center mb-6">
-                        <Award className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                        <h3 className="text-lg font-bold text-white mb-2">
-                            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                                Internship Certificate
-                            </span>
-                        </h3>
-                        <p className="text-sm text-slate-400 font-mono">Reverie Language Technologies</p>
-                    </div>
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        {/* Modal Trigger Button */}
-                        <button
-                            onClick={() => setIsModalOpen(true)}
-                            className="group relative bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/50 hover:shadow-xl hover:shadow-blue-500/70 flex items-center justify-center gap-2 overflow-hidden"
-                        >
-                            <span className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-                            <FileText size={18} className="relative z-10" />
-                            <span className="relative z-10">View Certificate</span>
-                        </button>
 
-                        {/* Download Button */}
-                        <a
-                            href="/InternshipCertificate_SouravMishra.pdf"
-                            download
-                            className="group bg-slate-700/50 border-2 border-slate-600 text-slate-200 px-6 py-3 rounded-xl font-semibold hover:bg-slate-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/20 flex items-center justify-center gap-2"
-                        >
-                            <span>Download Certificate</span>
-                        </a>
-                    </div>
-                </div>
 
                 {/* Certificate Modal */}
-                {isModalOpen && (
-                    <div
-                        className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4 md:p-6"
-                        onClick={() => setIsModalOpen(false)}
-                        onScroll={(e) => e.stopPropagation()}
-                    >
-                        <div
-                            className="bg-slate-800 border border-slate-700 rounded-xl sm:rounded-2xl shadow-2xl w-full max-w-5xl relative transition-all duration-300 flex flex-col"
-                            style={{ 
-                                maxHeight: 'calc(100vh - 1rem)',
-                                maxWidth: 'calc(100vw - 1rem)',
-                                margin: 'auto'
-                            }}
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            {/* Modal Header */}
-                            <div className="flex items-center justify-between p-3 sm:p-4 md:p-6 border-b border-slate-700 flex-shrink-0">
-                                <h3 className="text-white font-mono text-xs sm:text-sm md:text-base">
-                                    <span className="text-cyan-400">$</span> view_certificate
-                                </h3>
-                                <button
-                                    onClick={() => setIsModalOpen(false)}
-                                    className="text-slate-400 hover:text-white transition-colors p-1.5 sm:p-2 hover:bg-slate-700 rounded-lg flex-shrink-0"
-                                    aria-label="Close modal"
-                                >
-                                    <X size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
-                                </button>
-                            </div>
 
-                            {/* Modal Body - Scrollable */}
-                            <div 
-                                className="flex-1 overflow-y-auto overflow-x-hidden p-3 sm:p-4 md:p-6"
-                                style={{
-                                    minHeight: '200px'
-                                }}
-                            >
-                                <div className="rounded-lg border border-slate-700 overflow-hidden bg-slate-900/50 flex items-center justify-center w-full">
-                                    <img
-                                        src="/image.png"
-                                        alt="Internship Certificate"
-                                        className="w-full h-auto object-contain"
-                                        style={{ 
-                                            maxWidth: '100%',
-                                            display: 'block'
-                                        }}
-                                    />
-                                </div>
-                            </div>
-
-                            {/* Modal Footer */}
-                            <div className="p-3 sm:p-4 md:p-6 border-t border-slate-700 flex-shrink-0 flex justify-center">
-                                <button
-                                    onClick={() => setIsModalOpen(false)}
-                                    className="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-lg text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-800"
-                                >
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                )}
             </div>
         </div>
     );
