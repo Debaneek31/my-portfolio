@@ -18,7 +18,7 @@ export default function Home() {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Sourav Mishra Resume.pdf'; // must be in /public
+    link.href = '/Sourav Mishra Resume.pdf';
     link.download = 'Sourav_Mishra_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -52,7 +52,7 @@ export default function Home() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-900 mb-6 leading-snug text-center px-4 sm:px-6">
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent break-words">
                 <Typewriter
-                  words={["Hi, I'm Sourav"]}
+                  words={["Hi, I'm Debnath"]}
                   loop={false}
                   cursor
                   cursorStyle="|"
