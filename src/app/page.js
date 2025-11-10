@@ -130,7 +130,7 @@ export default function Home() {
 
             {/* Terminal-style Intro */}
             <div className="mb-6 font-mono text-sm text-slate-400 opacity-75">
-              <span className="text-emerald-400">sourav@portfolio</span>
+              <span className="text-emerald-400">debaneek@portfolio</span>
               <span className="text-slate-500">:</span>
               <span className="text-blue-400">~</span>
               <span className="text-slate-500">$</span>
