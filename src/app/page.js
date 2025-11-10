@@ -186,13 +186,12 @@ export default function Home() {
         {/* Main Hero Section */}
         <div className="min-h-screen flex flex-col justify-start items-center text-center pt-16 md:pt-20 pb-4 relative">
           <div
-            className={`w-full transition-all duration-1000 ${
-              isLoaded
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-10"
-            }`}
+            className={`w-full transition-all duration-1000 ${isLoaded
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+              }`}
           >
-            <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-5 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-5 leading-tight">
               <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 <Typewriter
                   words={["Hi, I'm Debaneek"]}
@@ -212,24 +211,22 @@ export default function Home() {
             >
               <div className="max-w-7xl mx-auto">
                 <div
-                  className={`bg-slate-800/60 backdrop-blur-md border border-slate-700/50 rounded-2xl overflow-hidden shadow-2xl transition-all duration-1000 ${
-                    isAboutVisible
-                      ? "opacity-100 translate-y-0 shadow-cyan-500/10"
-                      : "opacity-0 translate-y-10"
-                  } hover:shadow-cyan-500/20 hover:border-cyan-500/30`}
+                  className={`bg-slate-800/60 backdrop-blur-md border border-slate-700/50 rounded-2xl overflow-hidden shadow-2xl transition-all duration-1000 ${isAboutVisible
+                    ? "opacity-100 translate-y-0 shadow-cyan-500/10"
+                    : "opacity-0 translate-y-10"
+                    } hover:shadow-cyan-500/20 hover:border-cyan-500/30`}
                 >
                   <div className="grid md:grid-cols-[60%_40%] gap-0">
                     {/* Left Column - Text Content */}
                     <div
                       className="p-4 md:p-5 lg:p-6 flex flex-col justify-center min-h-[320px] md:min-h-[380px]"
-                     
+
                     >
                       <h2
-                        className={`text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2.5 md:mb-3 transition-all duration-1000 delay-200 ${
-                          isAboutVisible
-                            ? "opacity-100 translate-x-0"
-                            : "opacity-0 -translate-x-10"
-                        }`}
+                        className={`text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2.5 md:mb-3 transition-all duration-1000 delay-200 ${isAboutVisible
+                          ? "opacity-100 translate-x-0"
+                          : "opacity-0 -translate-x-10"
+                          }`}
                       >
                         <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                           About me
@@ -238,11 +235,10 @@ export default function Home() {
 
                       <div className="space-y-1.5 md:space-y-2 text-slate-300 leading-snug">
                         <p
-                          className={`text-xs md:text-sm lg:text-base transition-all duration-1000 delay-300 ${
-                            isAboutVisible
-                              ? "opacity-100 translate-x-0"
-                              : "opacity-0 -translate-x-10"
-                          }`}
+                          className={`text-xs md:text-sm lg:text-base transition-all duration-1000 delay-300 ${isAboutVisible
+                            ? "opacity-100 translate-x-0"
+                            : "opacity-0 -translate-x-10"
+                            }`}
                         >
                           I'm{" "}
                           <span className="text-cyan-400 font-semibold">
@@ -254,11 +250,10 @@ export default function Home() {
                         </p>
 
                         <p
-                          className={`text-xs md:text-sm lg:text-base transition-all duration-1000 delay-400 ${
-                            isAboutVisible
-                              ? "opacity-100 translate-x-0"
-                              : "opacity-0 -translate-x-10"
-                          }`}
+                          className={`text-xs md:text-sm lg:text-base transition-all duration-1000 delay-400 ${isAboutVisible
+                            ? "opacity-100 translate-x-0"
+                            : "opacity-0 -translate-x-10"
+                            }`}
                         >
                           Over the years, my focus has shifted towards creating
                           high-performance, scalable applications using
@@ -267,11 +262,10 @@ export default function Home() {
                         </p>
 
                         <p
-                          className={`text-xs md:text-sm lg:text-base transition-all duration-1000 delay-500 ${
-                            isAboutVisible
-                              ? "opacity-100 translate-x-0"
-                              : "opacity-0 -translate-x-10"
-                          }`}
+                          className={`text-xs md:text-sm lg:text-base transition-all duration-1000 delay-500 ${isAboutVisible
+                            ? "opacity-100 translate-x-0"
+                            : "opacity-0 -translate-x-10"
+                            }`}
                         >
                           I specialize in crafting responsive websites, web
                           applications, and systems that help businesses grow
@@ -284,11 +278,10 @@ export default function Home() {
 
                       {/* Tech badges */}
                       <div
-                        className={`mt-3 md:mt-4 flex flex-wrap gap-1.5 md:gap-2 transition-all duration-1000 delay-600 ${
-                          isAboutVisible
-                            ? "opacity-100 translate-y-0"
-                            : "opacity-0 translate-y-5"
-                        }`}
+                        className={`mt-3 md:mt-4 flex flex-wrap gap-1.5 md:gap-2 transition-all duration-1000 delay-600 ${isAboutVisible
+                          ? "opacity-100 translate-y-0"
+                          : "opacity-0 translate-y-5"
+                          }`}
                       >
                         {["Full Stack", "React", "Next.js", "Node.js"].map(
                           (tech, idx) => (
@@ -306,11 +299,10 @@ export default function Home() {
 
                     {/* Right Column - Image */}
                     <div
-                      className={`relative h-[320px] md:h-[380px] group transition-all duration-1000 delay-300 ${
-                        isAboutVisible
-                          ? "opacity-100 translate-x-0 scale-100"
-                          : "opacity-0 translate-x-10 scale-95"
-                      } flex items-center justify-center overflow-hidden`}
+                      className={`relative h-[320px] md:h-[380px] group transition-all duration-1000 delay-300 ${isAboutVisible
+                        ? "opacity-100 translate-x-0 scale-100"
+                        : "opacity-0 translate-x-10 scale-95"
+                        } flex items-center justify-center overflow-hidden`}
                     >
                       {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-500 pointer-events-none"></div>
@@ -373,20 +365,13 @@ export default function Home() {
               </button>
             </div>
 
-            {/* Scroll Indicator */}
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
-              <div className="w-6 h-10 border-2 border-cyan-500/50 rounded-full flex justify-center">
-                <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2"></div>
-              </div>
-            </div>
           </div>
         </div>
 
         {/* Skills Showcase Section */}
         <div
-          className={`py-20 transition-all duration-1000 delay-300 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`py-20 transition-all duration-1000 delay-300 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -418,9 +403,8 @@ export default function Home() {
 
         {/* Final CTA Section */}
         <div
-          className={`py-20 transition-all duration-1000 delay-600 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`py-20 transition-all duration-1000 delay-600 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <div className="relative bg-gradient-to-r from-blue-600/90 via-cyan-600/90 to-purple-600/90 backdrop-blur-sm rounded-3xl p-12 text-center text-white overflow-hidden max-w-5xl mx-auto border border-cyan-400/30 shadow-2xl">
             {/* Animated background pattern */}
