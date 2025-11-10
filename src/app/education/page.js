@@ -18,7 +18,7 @@ const educationData = [
         borderColor: "border-purple-200",
         iconColor: "text-purple-600",
         type: "Undergraduate",
-        image: "https://images.squarespace-cdn.com/content/v1/57713a8e2994cae381dd86fe/75119539-209d-48e4-83e9-4134ada499d7/iter+gate.jpg?format=2500w"
+        image: "https://eatm.in/wp-content/uploads/2025/02/WhatsApp-Image-2025-01-28-at-09.45.04_62eda28c.jpg"
     },
     {
         institution: "St. Xavier International School",
@@ -32,7 +32,7 @@ const educationData = [
         borderColor: "border-blue-200",
         iconColor: "text-blue-600",
         type: "Higher Secondary",
-        image: "https://stxavierskedargouri.in/wp-content/uploads/2025/06/3.png"
+        image: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwhVhw6Eyx_WJULefyBh6AA8GqYYO37HkqXe_xfjQDphVXobCj4zbtitEwFVUpJRFjT-lctV9roABg5g9XN35vA8yAnUuraUt04ErEI312UGgy-OkhY8hGSEvxIdpH_8mf6AkEhvg=s1360-w1360-h1020-rw"
     },
     {
         institution: "Carmel English Medium School (CBSE)",

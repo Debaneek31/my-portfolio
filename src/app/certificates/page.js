@@ -183,6 +183,174 @@ const WorkExperience = () => {
                 }
             ]
         },
+          {
+            company: "Reverie Language Technologies",
+            role: "Product Engineer Intern",
+            duration: "August 2024 – May 2025",
+            type: "Bengaluru, Karnataka, India",
+            logo: "https://revup.reverieinc.com/logo.svg",
+            color: "bg-blue-500",
+            achievements: [
+                {
+                    icon: <Wrench className="w-4 h-4" />,
+                    text: <>
+                        Built an interactive API Playground -{" "}
+                        <a
+                            href="https://revup.reverieinc.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
+                        >
+                            RevUp
+                        </a>{" "}
+                        that allows users and developers to test and explore Reverie's APIs in real time, improving engagement and understanding of API capabilities
+                    </>
+                },
+                {
+                    icon: <Code className="w-4 h-4" />,
+                    text: "Developed a dynamic and responsive web application using Next.js, delivering an optimized front-end experience across various devices and screen sizes"
+                },
+                {
+                    icon: <Package className="w-4 h-4" />,
+                    text: "Developed and published modular NPM packages for Reverie's APIs, which formed the basis for creating developer-friendly JavaScript SDKs, simplifying integration and enhancing accessibility across multiple programming environments"
+                },
+                {
+                    icon: <Shield className="w-4 h-4" />,
+                    text: "Addressed critical VAPT (Vulnerability Assessment and Penetration Testing) issues in RevUp, significantly improving the product's security and compliance standards"
+                },
+                {
+                    icon: <FileText className="w-4 h-4" />,
+                    text: <>
+                        Authored comprehensive and easy-to-follow{" "}
+                        <a
+                            href="https://docs.reverieinc.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
+                        >
+                            Reverie's API documentation
+                        </a>{" "}
+                        using Mintlify, ensuring smooth onboarding and integration for developers through clear examples and structured content.
+                    </>
+                },
+                {
+                    icon: <BarChart3 className="w-4 h-4" />,
+                    text: "Collaborated in the development of an Admin Dashboard that provides detailed visualizations of user activity, system performance, and usage analytics to support better decision-making"
+                }
+            ]
+        },
+          {
+            company: "Reverie Language Technologies",
+            role: "Product Engineer Intern",
+            duration: "August 2024 – May 2025",
+            type: "Bengaluru, Karnataka, India",
+            logo: "https://revup.reverieinc.com/logo.svg",
+            color: "bg-blue-500",
+            achievements: [
+                {
+                    icon: <Wrench className="w-4 h-4" />,
+                    text: <>
+                        Built an interactive API Playground -{" "}
+                        <a
+                            href="https://revup.reverieinc.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
+                        >
+                            RevUp
+                        </a>{" "}
+                        that allows users and developers to test and explore Reverie's APIs in real time, improving engagement and understanding of API capabilities
+                    </>
+                },
+                {
+                    icon: <Code className="w-4 h-4" />,
+                    text: "Developed a dynamic and responsive web application using Next.js, delivering an optimized front-end experience across various devices and screen sizes"
+                },
+                {
+                    icon: <Package className="w-4 h-4" />,
+                    text: "Developed and published modular NPM packages for Reverie's APIs, which formed the basis for creating developer-friendly JavaScript SDKs, simplifying integration and enhancing accessibility across multiple programming environments"
+                },
+                {
+                    icon: <Shield className="w-4 h-4" />,
+                    text: "Addressed critical VAPT (Vulnerability Assessment and Penetration Testing) issues in RevUp, significantly improving the product's security and compliance standards"
+                },
+                {
+                    icon: <FileText className="w-4 h-4" />,
+                    text: <>
+                        Authored comprehensive and easy-to-follow{" "}
+                        <a
+                            href="https://docs.reverieinc.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
+                        >
+                            Reverie's API documentation
+                        </a>{" "}
+                        using Mintlify, ensuring smooth onboarding and integration for developers through clear examples and structured content.
+                    </>
+                },
+                {
+                    icon: <BarChart3 className="w-4 h-4" />,
+                    text: "Collaborated in the development of an Admin Dashboard that provides detailed visualizations of user activity, system performance, and usage analytics to support better decision-making"
+                }
+            ]
+        },
+          {
+            company: "Reverie Language Technologies",
+            role: "Product Engineer Intern",
+            duration: "August 2024 – May 2025",
+            type: "Bengaluru, Karnataka, India",
+            logo: "https://revup.reverieinc.com/logo.svg",
+            color: "bg-blue-500",
+            achievements: [
+                {
+                    icon: <Wrench className="w-4 h-4" />,
+                    text: <>
+                        Built an interactive API Playground -{" "}
+                        <a
+                            href="https://revup.reverieinc.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
+                        >
+                            RevUp
+                        </a>{" "}
+                        that allows users and developers to test and explore Reverie's APIs in real time, improving engagement and understanding of API capabilities
+                    </>
+                },
+                {
+                    icon: <Code className="w-4 h-4" />,
+                    text: "Developed a dynamic and responsive web application using Next.js, delivering an optimized front-end experience across various devices and screen sizes"
+                },
+                {
+                    icon: <Package className="w-4 h-4" />,
+                    text: "Developed and published modular NPM packages for Reverie's APIs, which formed the basis for creating developer-friendly JavaScript SDKs, simplifying integration and enhancing accessibility across multiple programming environments"
+                },
+                {
+                    icon: <Shield className="w-4 h-4" />,
+                    text: "Addressed critical VAPT (Vulnerability Assessment and Penetration Testing) issues in RevUp, significantly improving the product's security and compliance standards"
+                },
+                {
+                    icon: <FileText className="w-4 h-4" />,
+                    text: <>
+                        Authored comprehensive and easy-to-follow{" "}
+                        <a
+                            href="https://docs.reverieinc.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
+                        >
+                            Reverie's API documentation
+                        </a>{" "}
+                        using Mintlify, ensuring smooth onboarding and integration for developers through clear examples and structured content.
+                    </>
+                },
+                {
+                    icon: <BarChart3 className="w-4 h-4" />,
+                    text: "Collaborated in the development of an Admin Dashboard that provides detailed visualizations of user activity, system performance, and usage analytics to support better decision-making"
+                }
+            ]
+        },
     ];
 
     const allSkills = [

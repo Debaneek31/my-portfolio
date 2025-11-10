@@ -1,18 +1,59 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import { Mail, Github, ArrowRight, Download, ExternalLink, Linkedin, X, Code2, Terminal, Cpu, Database, Cloud, Zap } from 'lucide-react';
-import Navbar from '@/components/Navbar';
-import { Typewriter } from 'react-simple-typewriter';
+import React, { useState, useEffect, useRef } from "react";
+import {
+  Mail,
+  Github,
+  ArrowRight,
+  Download,
+  ExternalLink,
+  Linkedin,
+  X,
+  Code2,
+  Terminal,
+  Cpu,
+  Database,
+  Cloud,
+  Zap,
+} from "lucide-react";
+import Navbar from "@/components/Navbar";
+import { Typewriter } from "react-simple-typewriter";
 import Link from "next/link";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isConnectModalOpen, setIsConnectModalOpen] = useState(false);
+  const [isAboutVisible, setIsAboutVisible] = useState(false);
   const canvasRef = useRef(null);
+  const aboutRef = useRef(null);
 
   useEffect(() => {
     setIsLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    // Intersection Observer for About section animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsAboutVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    );
+
+    const currentRef = aboutRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -20,24 +61,25 @@ export default function Home() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const binaryChars = '01';
+    const binaryChars = "01";
     const fontSize = 14;
     const columns = canvas.width / fontSize;
     const drops = Array(Math.floor(columns)).fill(1);
 
     function draw() {
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.05)';
+      ctx.fillStyle = "rgba(15, 23, 42, 0.05)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = '#3b82f6';
+      ctx.fillStyle = "#3b82f6";
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
-        const text = binaryChars[Math.floor(Math.random() * binaryChars.length)];
+        const text =
+          binaryChars[Math.floor(Math.random() * binaryChars.length)];
         const x = i * fontSize;
         const y = drops[i] * fontSize;
 
@@ -56,36 +98,44 @@ export default function Home() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       clearInterval(interval);
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/Sourav Mishra Resume.pdf';
-    link.download = 'Sourav_Mishra_Resume.pdf';
+    const link = document.createElement("a");
+    link.href = "/Sourav Mishra Resume.pdf";
+    link.download = "Sourav_Mishra_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   const codeSnippets = [
-    { lang: 'JS', code: 'const developer = new Developer();', color: 'text-yellow-400' },
-    { lang: 'PY', code: 'def build_amazing_things():', color: 'text-blue-400' },
-    { lang: 'TS', code: 'interface Innovation { code: string; }', color: 'text-cyan-400' },
+    {
+      lang: "JS",
+      code: "const developer = new Developer();",
+      color: "text-yellow-400",
+    },
+    { lang: "PY", code: "def build_amazing_things():", color: "text-blue-400" },
+    {
+      lang: "TS",
+      code: "interface Innovation { code: string; }",
+      color: "text-cyan-400",
+    },
   ];
 
   const techIcons = [
-    { Icon: Code2, label: 'Full Stack', color: 'text-blue-500' },
-    { Icon: Terminal, label: 'DevOps', color: 'text-green-500' },
-    { Icon: Database, label: 'Database', color: 'text-purple-500' },
-    { Icon: Cloud, label: 'Cloud', color: 'text-cyan-500' },
-    { Icon: Cpu, label: 'Systems', color: 'text-red-500' },
-    { Icon: Zap, label: 'Performance', color: 'text-yellow-500' },
+    { Icon: Code2, label: "Full Stack", color: "text-blue-500" },
+    { Icon: Terminal, label: "DevOps", color: "text-green-500" },
+    { Icon: Database, label: "Database", color: "text-purple-500" },
+    { Icon: Cloud, label: "Cloud", color: "text-cyan-500" },
+    { Icon: Cpu, label: "Systems", color: "text-red-500" },
+    { Icon: Zap, label: "Performance", color: "text-yellow-500" },
   ];
 
   return (
@@ -98,47 +148,51 @@ export default function Home() {
       />
 
       {/* Code Grid Pattern Overlay */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ zIndex: 1 }}>
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
+      <div
+        className="absolute inset-0 opacity-5 pointer-events-none"
+        style={{ zIndex: 1 }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
             linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px'
-        }}></div>
+            backgroundSize: "50px 50px",
+          }}
+        ></div>
       </div>
 
       {/* Animated Gradient Orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 1 }}>
+      <div
+        className="absolute inset-0 overflow-hidden pointer-events-none"
+        style={{ zIndex: 1 }}
+      >
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "1s" }}
+        ></div>
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "2s" }}
+        ></div>
       </div>
 
       <Navbar />
 
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
         {/* Main Hero Section */}
-        <div className="min-h-screen flex flex-col justify-center items-center text-center pt-20 pb-20 relative">
-          <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            {/* Status Badge - Terminal Style */}
-            <div className="inline-flex items-center gap-2 bg-slate-800/80 backdrop-blur-sm border border-emerald-500/30 text-emerald-400 px-4 py-2 rounded-lg text-sm font-mono mb-8 shadow-lg shadow-emerald-500/20">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-              <span className="text-emerald-400">$</span>
-              <span>status: available_for_opportunities</span>
-            </div>
-
-            {/* Terminal-style Intro */}
-            <div className="mb-6 font-mono text-sm text-slate-400 opacity-75">
-              <span className="text-emerald-400">sourav@portfolio</span>
-              <span className="text-slate-500">:</span>
-              <span className="text-blue-400">~</span>
-              <span className="text-slate-500">$</span>
-              <span className="ml-2">whoami</span>
-            </div>
-
-            {/* Main Title */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 leading-tight">
+        <div className="min-h-screen flex flex-col justify-start items-center text-center pt-16 md:pt-20 pb-4 relative">
+          <div
+            className={`w-full transition-all duration-1000 ${
+              isLoaded
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+          >
+            <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-5 leading-tight">
               <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 <Typewriter
                   words={["Hi, I'm Debaneek"]}
@@ -151,46 +205,133 @@ export default function Home() {
                 />
               </span>
             </h1>
+            {/* About Section */}
+            <div
+              ref={aboutRef}
+              className="w-full px-4 sm:px-6 lg:px-8 py-3 md:py-4"
+            >
+              <div className="max-w-7xl mx-auto">
+                <div
+                  className={`bg-slate-800/60 backdrop-blur-md border border-slate-700/50 rounded-2xl overflow-hidden shadow-2xl transition-all duration-1000 ${
+                    isAboutVisible
+                      ? "opacity-100 translate-y-0 shadow-cyan-500/10"
+                      : "opacity-0 translate-y-10"
+                  } hover:shadow-cyan-500/20 hover:border-cyan-500/30`}
+                >
+                  <div className="grid md:grid-cols-[60%_40%] gap-0">
+                    {/* Left Column - Text Content */}
+                    <div
+                      className="p-4 md:p-5 lg:p-6 flex flex-col justify-center min-h-[320px] md:min-h-[380px]"
+                     
+                    >
+                      <h2
+                        className={`text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2.5 md:mb-3 transition-all duration-1000 delay-200 ${
+                          isAboutVisible
+                            ? "opacity-100 translate-x-0"
+                            : "opacity-0 -translate-x-10"
+                        }`}
+                      >
+                        <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                          About me
+                        </span>
+                      </h2>
 
-            {/* Subtitle with animated typing effect */}
-            <div className="mb-8">
-              <p className="text-2xl sm:text-3xl md:text-4xl text-slate-300 font-light mb-2">
-                <span className="text-slate-500">&lt;</span>
-                <span className="text-cyan-400">Full Stack Developer</span>
-                <span className="text-slate-500">/&gt;</span>
-              </p>
-              <p className="text-lg sm:text-xl text-slate-400 font-mono">
-                Computer Science Enthusiast
-              </p>
-            </div>
+                      <div className="space-y-1.5 md:space-y-2 text-slate-300 leading-snug">
+                        <p
+                          className={`text-xs md:text-sm lg:text-base transition-all duration-1000 delay-300 ${
+                            isAboutVisible
+                              ? "opacity-100 translate-x-0"
+                              : "opacity-0 -translate-x-10"
+                          }`}
+                        >
+                          I'm{" "}
+                          <span className="text-cyan-400 font-semibold">
+                            Debaneek Chhotaray
+                          </span>
+                          , a passionate full-stack developer based in India
+                          with expertise in building modern web applications and
+                          innovative solutions.
+                        </p>
 
-            {/* Code Snippets Carousel */}
-            <div className="max-w-2xl mx-auto mb-8">
-              <div className="bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-lg p-4 shadow-xl">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  <span className="ml-4 text-xs text-slate-400 font-mono">terminal</span>
-                </div>
-                <div className="text-left font-mono text-sm">
-                  {codeSnippets.map((snippet, idx) => (
-                    <div key={idx} className={`mb-2 ${snippet.color} opacity-80 hover:opacity-100 transition-opacity`}>
-                      <span className="text-slate-500">$ </span>
-                      <span>{snippet.code}</span>
+                        <p
+                          className={`text-xs md:text-sm lg:text-base transition-all duration-1000 delay-400 ${
+                            isAboutVisible
+                              ? "opacity-100 translate-x-0"
+                              : "opacity-0 -translate-x-10"
+                          }`}
+                        >
+                          Over the years, my focus has shifted towards creating
+                          high-performance, scalable applications using
+                          cutting-edge technologies like React, Next.js,
+                          Node.js, and cloud platforms.
+                        </p>
+
+                        <p
+                          className={`text-xs md:text-sm lg:text-base transition-all duration-1000 delay-500 ${
+                            isAboutVisible
+                              ? "opacity-100 translate-x-0"
+                              : "opacity-0 -translate-x-10"
+                          }`}
+                        >
+                          I specialize in crafting responsive websites, web
+                          applications, and systems that help businesses grow
+                          and scale. My work is centered on creating solutions
+                          that drive conversions, enable seamless user
+                          experiences, and deliver measurable results through
+                          clean, efficient code.
+                        </p>
+                      </div>
+
+                      {/* Tech badges */}
+                      <div
+                        className={`mt-3 md:mt-4 flex flex-wrap gap-1.5 md:gap-2 transition-all duration-1000 delay-600 ${
+                          isAboutVisible
+                            ? "opacity-100 translate-y-0"
+                            : "opacity-0 translate-y-5"
+                        }`}
+                      >
+                        {["Full Stack", "React", "Next.js", "Node.js"].map(
+                          (tech, idx) => (
+                            <span
+                              key={idx}
+                              className="px-2.5 md:px-3 py-0.5 md:py-1 bg-slate-700/50 border border-cyan-500/30 rounded-full text-xs text-cyan-400 font-medium hover:border-cyan-500/60 hover:bg-slate-700/70 hover:scale-110 transition-all duration-300 cursor-default"
+                              style={{ transitionDelay: `${idx * 50}ms` }}
+                            >
+                              {tech}
+                            </span>
+                          )
+                        )}
+                      </div>
                     </div>
-                  ))}
+
+                    {/* Right Column - Image */}
+                    <div
+                      className={`relative h-[320px] md:h-[380px] group transition-all duration-1000 delay-300 ${
+                        isAboutVisible
+                          ? "opacity-100 translate-x-0 scale-100"
+                          : "opacity-0 translate-x-10 scale-95"
+                      } flex items-center justify-center overflow-hidden`}
+                    >
+                      {/* Gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-500 pointer-events-none"></div>
+
+                      <img
+                        src="/ronnie1.jpg"
+                        alt="Debaneek Chhotaray"
+                        className="w-full h-full object-cover relative z-20 transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy"
+                      />
+
+                      {/* Overlay gradient for better contrast */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent pointer-events-none z-10"></div>
+
+                      {/* Border glow on hover */}
+                      <div className="absolute inset-0 border-4 border-cyan-500/0 group-hover:border-cyan-500/20 transition-all duration-500 pointer-events-none z-30 rounded-r-2xl"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-
-            {/* Brief Description */}
-            <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-12 leading-relaxed">
-              A passionate <span className="text-cyan-400 font-semibold">Computer Science Graduate</span> who transforms
-              complex problems into elegant solutions. Specialized in building scalable web applications
-              and innovative systems using cutting-edge technologies.
-            </p>
-
             {/* Tech Icons Grid */}
             <div className="flex flex-wrap justify-center gap-6 mb-12 max-w-3xl mx-auto">
               {techIcons.map((tech, idx) => (
@@ -198,8 +339,12 @@ export default function Home() {
                   key={idx}
                   className="group flex flex-col items-center gap-2 p-4 bg-slate-800/40 backdrop-blur-sm border border-slate-700/30 rounded-xl hover:border-cyan-500/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20"
                 >
-                  <tech.Icon className={`w-8 h-8 ${tech.color} group-hover:scale-125 transition-transform`} />
-                  <span className="text-xs text-slate-400 font-mono">{tech.label}</span>
+                  <tech.Icon
+                    className={`w-8 h-8 ${tech.color} group-hover:scale-125 transition-transform`}
+                  />
+                  <span className="text-xs text-slate-400 font-mono">
+                    {tech.label}
+                  </span>
                 </div>
               ))}
             </div>
@@ -213,7 +358,10 @@ export default function Home() {
                 <span className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
                 <Mail size={20} className="relative z-10" />
                 <span className="relative z-10">Let's Connect</span>
-                <ArrowRight size={16} className="relative z-10 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight
+                  size={16}
+                  className="relative z-10 group-hover:translate-x-1 transition-transform"
+                />
               </button>
 
               <button
@@ -235,7 +383,11 @@ export default function Home() {
         </div>
 
         {/* Skills Showcase Section */}
-        <div className={`py-20 transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div
+          className={`py-20 transition-all duration-1000 delay-300 ${
+            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -243,12 +395,21 @@ export default function Home() {
               </span>
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {['React', 'Next.js', 'Node.js', 'Python', 'TypeScript', 'MongoDB'].map((tech, idx) => (
+              {[
+                "React",
+                "Next.js",
+                "Node.js",
+                "Python",
+                "TypeScript",
+                "MongoDB",
+              ].map((tech, idx) => (
                 <div
                   key={idx}
                   className="group bg-slate-800/40 backdrop-blur-sm border border-slate-700/30 rounded-xl p-6 text-center hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20"
                 >
-                  <div className="text-2xl font-bold text-cyan-400 mb-2 font-mono">{tech}</div>
+                  <div className="text-2xl font-bold text-cyan-400 mb-2 font-mono">
+                    {tech}
+                  </div>
                 </div>
               ))}
             </div>
@@ -256,25 +417,34 @@ export default function Home() {
         </div>
 
         {/* Final CTA Section */}
-        <div className={`py-20 transition-all duration-1000 delay-600 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div
+          className={`py-20 transition-all duration-1000 delay-600 ${
+            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <div className="relative bg-gradient-to-r from-blue-600/90 via-cyan-600/90 to-purple-600/90 backdrop-blur-sm rounded-3xl p-12 text-center text-white overflow-hidden max-w-5xl mx-auto border border-cyan-400/30 shadow-2xl">
             {/* Animated background pattern */}
             <div className="absolute inset-0 opacity-10">
-              <div className="absolute inset-0" style={{
-                backgroundImage: `
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundImage: `
                   repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 20px)
-                `
-              }}></div>
+                `,
+                }}
+              ></div>
             </div>
 
             <div className="relative z-10">
               <div className="mb-4">
                 <Code2 className="w-16 h-16 mx-auto mb-4 text-cyan-200 animate-pulse" />
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">Let's Build Something Amazing</h3>
+              <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                Let's Build Something Amazing
+              </h3>
               <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-                Ready to bring your ideas to life? Let's connect and discuss how we can work together
-                to create innovative solutions.
+                Ready to bring your ideas to life? Let's connect and discuss how
+                we can work together to create innovative solutions.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -284,7 +454,10 @@ export default function Home() {
                 >
                   <Mail size={20} />
                   Start a Conversation
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight
+                    size={16}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
                 </Link>
                 <Link
                   href="/projects"
@@ -292,7 +465,10 @@ export default function Home() {
                 >
                   <ExternalLink size={20} />
                   View My Work
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight
+                    size={16}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
                 </Link>
               </div>
             </div>
@@ -330,7 +506,9 @@ export default function Home() {
                 <Mail size={24} className="text-cyan-400" />
                 <div>
                   <p className="font-semibold text-white">Email</p>
-                  <p className="text-sm text-slate-400 group-hover:text-cyan-400 transition-colors font-mono">debaneekchhotaray@gmail.com</p>
+                  <p className="text-sm text-slate-400 group-hover:text-cyan-400 transition-colors font-mono">
+                    debaneekchhotaray@gmail.com
+                  </p>
                 </div>
               </a>
 
@@ -344,7 +522,9 @@ export default function Home() {
                 <Github size={24} className="text-white" />
                 <div>
                   <p className="font-semibold text-white">GitHub</p>
-                  <p className="text-sm text-slate-400 group-hover:text-cyan-400 transition-colors font-mono">/Debaneek31</p>
+                  <p className="text-sm text-slate-400 group-hover:text-cyan-400 transition-colors font-mono">
+                    /Debaneek31
+                  </p>
                 </div>
               </a>
 
@@ -358,7 +538,9 @@ export default function Home() {
                 <Linkedin size={24} className="text-cyan-400" />
                 <div>
                   <p className="font-semibold text-white">LinkedIn</p>
-                  <p className="text-sm text-slate-400 group-hover:text-cyan-400 transition-colors">Debaneek Chhotaray</p>
+                  <p className="text-sm text-slate-400 group-hover:text-cyan-400 transition-colors">
+                    Debaneek Chhotaray
+                  </p>
                 </div>
               </a>
             </div>
