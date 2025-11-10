@@ -7,9 +7,9 @@ import Navbar from '@/components/Navbar';
 
 const educationData = [
     {
-        institution: "Siksha 'O' Anusandhan (ITER)",
+        institution: "Einstein Academy of Technology and Management",
         degree: "B. Tech in Computer Science & Engineering",
-        score: "CGPA: 8.87",
+        score: "CGPA: 8.25",
         duration: "2025",
         location: "Bhubaneswar, Odisha",
         logo: "🎓",
@@ -21,11 +21,11 @@ const educationData = [
         image: "https://images.squarespace-cdn.com/content/v1/57713a8e2994cae381dd86fe/75119539-209d-48e4-83e9-4134ada499d7/iter+gate.jpg?format=2500w"
     },
     {
-        institution: "St. Xavier's High School (CBSE)",
+        institution: "St. Xavier International School",
         degree: "Class XII",
-        score: "Percentage: 91.2%",
+        score: "Percentage: 66%",
         duration: "2021",
-        location: "Bhubaneswar, Odisha",
+        location: "Patia, Bhubaneswar, Odisha",
         logo: "🏫",
         color: "from-blue-500 to-cyan-500",
         bgColor: "bg-gradient-to-br from-blue-50 to-cyan-50",
@@ -37,7 +37,7 @@ const educationData = [
     {
         institution: "Carmel English Medium School (CBSE)",
         degree: "Class X",
-        score: "Percentage: 95%",
+        score: "Percentage: 75%",
         duration: "2019",
         location: "Khordha, Odisha",
         logo: "🏛️",
@@ -48,6 +48,7 @@ const educationData = [
         type: "Secondary",
         image: "https://images.jdmagicbox.com/comp/jatani/a9/9999px674.x674.110411144249.d2a9/catalogue/carmel-english-school-arugul-jatani-cbse-schools-TLHlub7Ph4.jpg"
     }
+    
 ];
 
 export default function EnhancedEducationPage() {
