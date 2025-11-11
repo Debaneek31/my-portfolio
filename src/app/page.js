@@ -109,8 +109,8 @@ export default function Home() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Sourav Mishra Resume.pdf";
-    link.download = "Sourav_Mishra_Resume.pdf";
+    link.href = "/Debaneek_Resume.pdf";
+    link.download = "Debaneek_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -449,7 +449,7 @@ export default function Home() {
                   className="group border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
                 >
                   <ExternalLink size={20} />
-                  View My Work
+                  View My Projects
                   <ArrowRight
                     size={16}
                     className="group-hover:translate-x-1 transition-transform"

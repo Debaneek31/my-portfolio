@@ -119,9 +119,9 @@ const Contact = () => {
         setIsSubmitting(true);
 
         try {
-            const serviceID = 'service_xdqvuzs';
-            const templateID = 'template_v9lu0dn';
-            const publicKey = 'CkWn01oKTBPEPY_Tc';
+            const serviceID = 'service_8o7ails';
+            const templateID = 'template_k5rjzcn';
+            const publicKey = 'DFKtkzH34ONJ5JVPY';
 
             const result = await emailjs.send(serviceID, templateID, formData, publicKey);
 
@@ -255,12 +255,12 @@ const Contact = () => {
             <div className="relative z-10 max-w-6xl mx-auto pt-24 pb-12 px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className={`text-center mb-16 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                    <div className="inline-flex items-center gap-2 bg-slate-800/80 backdrop-blur-sm border border-cyan-500/30 text-cyan-400 px-4 py-2 rounded-lg text-sm font-mono mb-6 shadow-lg shadow-cyan-500/20">
+                   {/*  <div className="inline-flex items-center gap-2 bg-slate-800/80 backdrop-blur-sm border border-cyan-500/30 text-cyan-400 px-4 py-2 rounded-lg text-sm font-mono mb-6 shadow-lg shadow-cyan-500/20">
                         <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></div>
                         <MessageCircle className="w-4 h-4" />
                         <span className="text-emerald-400">$</span>
                         <span>get_in_touch</span>
-                    </div>
+                    </div> */}
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
                         <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
                             Get In Touch
