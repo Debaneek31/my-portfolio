@@ -30,6 +30,7 @@ export default function Home() {
   useEffect(() => {
     setIsLoaded(true);
   }, []);
+  
 
   useEffect(() => {
     // Intersection Observer for About section animations

@@ -113,9 +113,9 @@ const Projects = () => {
         },
         {
             id: 4,
-            title: "Network Desktop Manager",
+            title: "Digital Marketing",
             description: "Secure remote desktop access software with administrative controls and real-time communication",
-            technologies: ["Java (Swing)", "Java Sockets"],
+            technologies: ["Canva", "SEO", ""],
             features: [
                 "Remote desktop access for secure machine control over network",
                 "Admin controls for managing user settings and system configurations",

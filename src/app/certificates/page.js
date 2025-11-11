@@ -97,17 +97,130 @@ const WorkExperience = () => {
     }, []);
 
     const workExperiences = [
+        
         {
-            company: "KPMG India",
-            role: "Analyst – G & PS (GovTech)",
-            duration: "Aug 2025 – Present",
-            type: "Kolkata, West Bengal, India",
-            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCLvx1x8oeXs-DidUVmNti1LMUwkdDG3Fn0Q&s",
+            company: "Skill Nation",
+            role: "Business Intelligence Using Power BI",
+            duration: "August 2024",
+            type: "Bhubaneswar, Odisha, India",
+            logo: "https://skillnation.ai/wp-content/uploads/2023/08/SN_logo-17-1024x415.png",
+            color: "bg-blue-500",
+            achievements: [
+                {
+                    icon: <Wrench className="w-4 h-4" />,
+                    text: <>
+                        Successfully completed a hands-on workshop on {" "}
+                        <a
+                            href="https://drive.google.com/file/d/1FxoEOPoRMY8SVMjb_FiBPYvrhKk6pPm2/view"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
+                        >
+                            Business Intelligence 
+                        </a>{" "}
+                        using Microsoft Power BI
+                    </>
+                },
+                {
+                    icon: <Code className="w-4 h-4" />,
+                    text: "Learned to create interactive dashboards and visual reports for effective data storytelling."
+                },
+                {
+                    icon: <Package className="w-4 h-4" />,
+                    text: "Gained practical skills in data modeling, DAX functions, and real-time analytics."
+                },
+                {
+                    icon: <Shield className="w-4 h-4" />,
+                    text: "Explored techniques to transform raw data into actionable business insights."
+                },
+                /* {
+                    icon: <FileText className="w-4 h-4" />,
+                    text: <>
+                        Authored comprehensive and easy-to-follow{" "}
+                        <a
+                            href="https://docs.reverieinc.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
+                        >
+                            Reverie's API documentation
+                        </a>{" "}
+                        using Mintlify, ensuring smooth onboarding and integration for developers through clear examples and structured content.
+                    </>
+                }, */
+                {
+                    icon: <BarChart3 className="w-4 h-4" />,
+                    text: "Strengthened understanding of data visualization and decision-making using Power BI tools."
+                }
+            ]
+        },
+          {
+            company: "Scaler Topics",
+            role: "Completed Python and SQL for Data Science",
+            duration: "May 2024 – July 2024",
+            type: "Bhubaneswar, Odisha, India",
+            logo: "https://pbs.twimg.com/profile_images/1439832757761306631/zWTKZBLb_400x400.png",
+            color: "bg-blue-500",
+            achievements: [
+                {
+                    icon: <Wrench className="w-4 h-4" />,
+                    text: <>
+                        Completed an industry-oriented course focused on{" "}
+                        <a
+                            href="https://moonshot.scaler.com/s/sl/cQClo9wVjJ?_gl=1*ztdxwq*_gcl_aw*R0NMLjE3MTQzMTc0NjMuQ2p3S0NBanc1N2V4QmhBc0Vpd0FhSXhhWnZBUHZlSUFQcENpX2FDdUJVMUZ3TE0xTFlyRjhjQjdwRENnUFA5dUJmZFhQaFRSUldRa3Zob0NTTUlRQXZEX0J3RQ..*_gcl_au*MTk3Mjk5NTcyNi4xNzIxODc5MDMx*FPAU*NjE5OTUxOTQzLjE3MjA3ODUxNzE.*_ga*MTMyMjE0MjgwNC4xNzEyOTg5NDAz*_ga_53S71ZZG1X*MTcyMTg3OTAzMS43OC4xLjE3MjE4NzkwNTkuMC4wLjUzNjI0ODAwMA"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
+                        >
+                            Python programming and SQL for Data Science
+                        </a>{" "}
+                        .
+                    </>
+                },
+                {
+                    icon: <Code className="w-4 h-4" />,
+                    text: "Gained hands-on experience in data manipulation, analysis, and visualization using Python libraries like Pandas, NumPy, and Matplotlib."
+                },
+                {
+                    icon: <Package className="w-4 h-4" />,
+                    text: "Learned to write efficient SQL queries for data extraction, aggregation, and optimization"
+                },
+                {
+                    icon: <Shield className="w-4 h-4" />,
+                    text: "Addressed critical VAPT (Vulnerability Assessment and Penetration Testing) issues in RevUp, significantly improving the product's security and compliance standards"
+                },
+                /* {
+                    icon: <FileText className="w-4 h-4" />,
+                    text: <>
+                        Authored comprehensive and easy-to-follow{" "}
+                        <a
+                            href="https://docs.reverieinc.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
+                        >
+                            Reverie's API documentation
+                        </a>{" "}
+                        using Mintlify, ensuring smooth onboarding and integration for developers through clear examples and structured content.
+                    </>
+                }, */
+                {
+                    icon: <BarChart3 className="w-4 h-4" />,
+                    text: "Strengthened foundational knowledge essential for data-driven decision-making and machine learning applications."
+                }
+            ]
+        },
+        {
+            company: "NASSCOM",
+            role: "Certificate of Big Data",
+            duration: "Nov 2023 – Dec 2023",
+            type: "Khordha, West Bengal, India",
+            logo: "https://nasscom.in/themes/custom/nasscomredesigntheme/images/logo.svg",
             color: "bg-green-500",
             achievements: [
                 {
                     icon: <Database className="w-4 h-4" />,
-                    text: "Collect, validate, and manage data from field and system sources to support monitoring of government health schemes."
+                    text: "Collect, validate, and manage data from field and system sources to support monitoring of many big data of various e-commerce platform."
                 },
                 {
                     icon: <BarChart4 className="w-4 h-4" />,
@@ -127,42 +240,42 @@ const WorkExperience = () => {
                 }
             ]
         },
-        {
-            company: "Reverie Language Technologies",
-            role: "Product Engineer Intern",
-            duration: "August 2024 – May 2025",
-            type: "Bengaluru, Karnataka, India",
-            logo: "https://revup.reverieinc.com/logo.svg",
+          {
+            company: "Technoxian World Robotic Championship",
+            role: "2nd Runner Up Drone Competition",
+            duration: "July 2023",
+            type: "Noida, Uttar Pradesh, India",
+            logo: "https://www.technoxian.com/images/technoxian-social.png",
             color: "bg-blue-500",
             achievements: [
                 {
                     icon: <Wrench className="w-4 h-4" />,
                     text: <>
-                        Built an interactive API Playground -{" "}
+                        Secured{" "}
                         <a
                             href="https://revup.reverieinc.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
                         >
-                            RevUp
+                            2nd Runner-Up
                         </a>{" "}
-                        that allows users and developers to test and explore Reverie's APIs in real time, improving engagement and understanding of API capabilities
+                        in the prestigious Technoxian World Robotics Championship held in Noida, 2023.
                     </>
                 },
                 {
                     icon: <Code className="w-4 h-4" />,
-                    text: "Developed a dynamic and responsive web application using Next.js, delivering an optimized front-end experience across various devices and screen sizes"
+                    text: "Competed in the Drone category against teams from 21+ countries, including Russia, China, and the Middle East."
                 },
                 {
                     icon: <Package className="w-4 h-4" />,
-                    text: "Developed and published modular NPM packages for Reverie's APIs, which formed the basis for creating developer-friendly JavaScript SDKs, simplifying integration and enhancing accessibility across multiple programming environments"
+                    text: "Represented our college and demonstrated strong technical and teamwork skills in drone design and operation."
                 },
                 {
                     icon: <Shield className="w-4 h-4" />,
-                    text: "Addressed critical VAPT (Vulnerability Assessment and Penetration Testing) issues in RevUp, significantly improving the product's security and compliance standards"
+                    text: "Successfully designed, programmed, and executed drone challenges under international competition standards."
                 },
-                {
+                /* {
                     icon: <FileText className="w-4 h-4" />,
                     text: <>
                         Authored comprehensive and easy-to-follow{" "}
@@ -176,49 +289,49 @@ const WorkExperience = () => {
                         </a>{" "}
                         using Mintlify, ensuring smooth onboarding and integration for developers through clear examples and structured content.
                     </>
-                },
+                }, */
                 {
                     icon: <BarChart3 className="w-4 h-4" />,
-                    text: "Collaborated in the development of an Admin Dashboard that provides detailed visualizations of user activity, system performance, and usage analytics to support better decision-making"
+                    text: "Gained valuable experience in robotics, automation, and real-time problem solving on a global platform."
                 }
             ]
         },
           {
-            company: "Reverie Language Technologies",
-            role: "Product Engineer Intern",
-            duration: "August 2024 – May 2025",
-            type: "Bengaluru, Karnataka, India",
-            logo: "https://revup.reverieinc.com/logo.svg",
+            company: "Edu Fabrica",
+            role: "Student",
+            duration: "July 2022",
+            type: "IIT Bhubaneswar, Odisha, India",
+            logo: "https://edufabrica.net/_next/static/media/Logo.6324fde1.jpg",
             color: "bg-blue-500",
             achievements: [
                 {
                     icon: <Wrench className="w-4 h-4" />,
                     text: <>
-                        Built an interactive API Playground -{" "}
+                        Completed a comprehensive {" "}
                         <a
-                            href="https://revup.reverieinc.com"
+                            href="https://fsp-assessment-certificates.s3-ap-southeast-1.amazonaws.com/DebaneekChhotaray-126356375.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
                         >
-                            RevUp
+                            Data Science course
                         </a>{" "}
-                        that allows users and developers to test and explore Reverie's APIs in real time, improving engagement and understanding of API capabilities
+                        conducted by IIT Bhubaneswar in collaboration with Edu Fabrica.
                     </>
                 },
                 {
                     icon: <Code className="w-4 h-4" />,
-                    text: "Developed a dynamic and responsive web application using Next.js, delivering an optimized front-end experience across various devices and screen sizes"
+                    text: "Gained practical knowledge of Python, SQL, and data visualization tools for real-world data analysis."
                 },
                 {
                     icon: <Package className="w-4 h-4" />,
-                    text: "Developed and published modular NPM packages for Reverie's APIs, which formed the basis for creating developer-friendly JavaScript SDKs, simplifying integration and enhancing accessibility across multiple programming environments"
+                    text: "Learned key concepts of Machine Learning, Data Cleaning, and Statistical Modeling."
                 },
                 {
                     icon: <Shield className="w-4 h-4" />,
-                    text: "Addressed critical VAPT (Vulnerability Assessment and Penetration Testing) issues in RevUp, significantly improving the product's security and compliance standards"
+                    text: "Worked on hands-on projects that strengthened analytical and problem-solving skills."
                 },
-                {
+                /* {
                     icon: <FileText className="w-4 h-4" />,
                     text: <>
                         Authored comprehensive and easy-to-follow{" "}
@@ -232,119 +345,7 @@ const WorkExperience = () => {
                         </a>{" "}
                         using Mintlify, ensuring smooth onboarding and integration for developers through clear examples and structured content.
                     </>
-                },
-                {
-                    icon: <BarChart3 className="w-4 h-4" />,
-                    text: "Collaborated in the development of an Admin Dashboard that provides detailed visualizations of user activity, system performance, and usage analytics to support better decision-making"
-                }
-            ]
-        },
-          {
-            company: "Reverie Language Technologies",
-            role: "Product Engineer Intern",
-            duration: "August 2024 – May 2025",
-            type: "Bengaluru, Karnataka, India",
-            logo: "https://revup.reverieinc.com/logo.svg",
-            color: "bg-blue-500",
-            achievements: [
-                {
-                    icon: <Wrench className="w-4 h-4" />,
-                    text: <>
-                        Built an interactive API Playground -{" "}
-                        <a
-                            href="https://revup.reverieinc.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
-                        >
-                            RevUp
-                        </a>{" "}
-                        that allows users and developers to test and explore Reverie's APIs in real time, improving engagement and understanding of API capabilities
-                    </>
-                },
-                {
-                    icon: <Code className="w-4 h-4" />,
-                    text: "Developed a dynamic and responsive web application using Next.js, delivering an optimized front-end experience across various devices and screen sizes"
-                },
-                {
-                    icon: <Package className="w-4 h-4" />,
-                    text: "Developed and published modular NPM packages for Reverie's APIs, which formed the basis for creating developer-friendly JavaScript SDKs, simplifying integration and enhancing accessibility across multiple programming environments"
-                },
-                {
-                    icon: <Shield className="w-4 h-4" />,
-                    text: "Addressed critical VAPT (Vulnerability Assessment and Penetration Testing) issues in RevUp, significantly improving the product's security and compliance standards"
-                },
-                {
-                    icon: <FileText className="w-4 h-4" />,
-                    text: <>
-                        Authored comprehensive and easy-to-follow{" "}
-                        <a
-                            href="https://docs.reverieinc.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
-                        >
-                            Reverie's API documentation
-                        </a>{" "}
-                        using Mintlify, ensuring smooth onboarding and integration for developers through clear examples and structured content.
-                    </>
-                },
-                {
-                    icon: <BarChart3 className="w-4 h-4" />,
-                    text: "Collaborated in the development of an Admin Dashboard that provides detailed visualizations of user activity, system performance, and usage analytics to support better decision-making"
-                }
-            ]
-        },
-          {
-            company: "Reverie Language Technologies",
-            role: "Product Engineer Intern",
-            duration: "August 2024 – May 2025",
-            type: "Bengaluru, Karnataka, India",
-            logo: "https://revup.reverieinc.com/logo.svg",
-            color: "bg-blue-500",
-            achievements: [
-                {
-                    icon: <Wrench className="w-4 h-4" />,
-                    text: <>
-                        Built an interactive API Playground -{" "}
-                        <a
-                            href="https://revup.reverieinc.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
-                        >
-                            RevUp
-                        </a>{" "}
-                        that allows users and developers to test and explore Reverie's APIs in real time, improving engagement and understanding of API capabilities
-                    </>
-                },
-                {
-                    icon: <Code className="w-4 h-4" />,
-                    text: "Developed a dynamic and responsive web application using Next.js, delivering an optimized front-end experience across various devices and screen sizes"
-                },
-                {
-                    icon: <Package className="w-4 h-4" />,
-                    text: "Developed and published modular NPM packages for Reverie's APIs, which formed the basis for creating developer-friendly JavaScript SDKs, simplifying integration and enhancing accessibility across multiple programming environments"
-                },
-                {
-                    icon: <Shield className="w-4 h-4" />,
-                    text: "Addressed critical VAPT (Vulnerability Assessment and Penetration Testing) issues in RevUp, significantly improving the product's security and compliance standards"
-                },
-                {
-                    icon: <FileText className="w-4 h-4" />,
-                    text: <>
-                        Authored comprehensive and easy-to-follow{" "}
-                        <a
-                            href="https://docs.reverieinc.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
-                        >
-                            Reverie's API documentation
-                        </a>{" "}
-                        using Mintlify, ensuring smooth onboarding and integration for developers through clear examples and structured content.
-                    </>
-                },
+                } */,
                 {
                     icon: <BarChart3 className="w-4 h-4" />,
                     text: "Collaborated in the development of an Admin Dashboard that provides detailed visualizations of user activity, system performance, and usage analytics to support better decision-making"
@@ -354,8 +355,8 @@ const WorkExperience = () => {
     ];
 
     const allSkills = [
-        "React.js", "Next.js", "Node.js", "Express.js", "MongoDB",
-        "JavaScript", "Git", "Jira", "Mintlify", "Tailwind CSS",
+        "React.js", "Next.js", "Node.js", "Pandas", "MongoDB",
+        "JavaScript", "Git", "Matplotlib", "Numpy", "Tailwind CSS",
         "MS Excel", "Power BI", "Tableau", "SQL"
     ];
 
@@ -399,7 +400,7 @@ const WorkExperience = () => {
                     </div>
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
                         <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                            Work Experience
+                            Certificates
                         </span>
                     </h1>
                     <p className="text-lg sm:text-xl text-slate-300 font-mono">
