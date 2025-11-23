@@ -90,12 +90,15 @@ const Skills = () => {
             ]
         },
         databases: {
-            title: "Databases",
+            title: "Big Data",
             icon: <Database className="w-6 h-6" />,
             color: "from-purple-500 to-purple-600",
             skills: [
-                { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-                { name: "SQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" }
+                { name: "Apache Hadoop", logo: "https://media.licdn.com/dms/image/v2/D4D12AQF9xVPk1EkjIg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1687688994385?e=2147483647&v=beta&t=ICM5tfmSPoUjbk06vlr09m4o3o9npAzTrYDOCw6a6Rs" },
+                { name: "SQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+                { name: "Apache Spark", logo: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fy37j9u6oqjws0ggrmkuq.png" },
+                { name: "Tableau", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvRWzAdk6uqOqRQdpUiHrWC3fpmR26I5YHww&s" },
+
             ]
         },
         tools: {

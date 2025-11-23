@@ -32,7 +32,7 @@ const Navbar = () => {
         { title: 'Certificates', href: '/certificates' },
         { title: 'Education', href: '/education' },
         { title: 'Technologies', href: '/technologies' },
-        { title: 'Projects', href: '/projects' },
+        //{ title: 'Projects', href: '/projects' },
         { title: 'Contact', href: '/contact' },
     ];
 

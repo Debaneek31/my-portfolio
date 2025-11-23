@@ -370,7 +370,7 @@ export default function Home() {
         </div>
 
         {/* Skills Showcase Section */}
-        <div
+        {/* <div
           className={`py-20 transition-all duration-1000 delay-300 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
         >
@@ -400,7 +400,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Final CTA Section */}
         <div
