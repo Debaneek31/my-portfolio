@@ -3,13 +3,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
     Calendar, MapPin, Code, Shield, FileText,
-    BarChart3, Wrench, Package, Database, BarChart4, FileSpreadsheet, X, Briefcase, Award
+    BarChart3, Wrench, Package, Database, BarChart4, FileSpreadsheet, X, ExternalLink
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 
 
 const WorkExperience = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedCertificate, setSelectedCertificate] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const canvasRef = useRef(null);
 
@@ -18,7 +19,6 @@ const WorkExperience = () => {
     }, []);
 
     useEffect(() => {
-        // Prevent body scroll when modal is open
         if (isModalOpen) {
             document.body.style.overflow = 'hidden';
         } else {
@@ -31,7 +31,6 @@ const WorkExperience = () => {
     }, [isModalOpen]);
 
     useEffect(() => {
-        // Close modal on ESC key press
         const handleEscKey = (event) => {
             if (event.key === 'Escape' && isModalOpen) {
                 setIsModalOpen(false);
@@ -48,7 +47,6 @@ const WorkExperience = () => {
     }, [isModalOpen]);
 
     useEffect(() => {
-        // Animated binary background
         const canvas = canvasRef.current;
         if (!canvas) return;
 
@@ -96,8 +94,13 @@ const WorkExperience = () => {
         };
     }, []);
 
+    const handleViewCertificate = (url) => {
+        if (url) {
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+    };
+
     const workExperiences = [
-        
         {
             company: "Skill Nation",
             role: "Business Intelligence Using Power BI",
@@ -105,21 +108,11 @@ const WorkExperience = () => {
             type: "Bhubaneswar, Odisha, India",
             logo: "https://skillnation.ai/wp-content/uploads/2023/08/SN_logo-17-1024x415.png",
             color: "bg-blue-500",
+            certificateUrl: "https://drive.google.com/file/d/1FxoEOPoRMY8SVMjb_FiBPYvrhKk6pPm2/view",
             achievements: [
                 {
                     icon: <Wrench className="w-4 h-4" />,
-                    text: <>
-                        Successfully completed a hands-on workshop on {" "}
-                        <a
-                            href="https://drive.google.com/file/d/1FxoEOPoRMY8SVMjb_FiBPYvrhKk6pPm2/view"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
-                        >
-                            Business Intelligence 
-                        </a>{" "}
-                        using Microsoft Power BI
-                    </>
+                    text: "Successfully completed a hands-on workshop on Business Intelligence using Microsoft Power BI"
                 },
                 {
                     icon: <Code className="w-4 h-4" />,
@@ -133,49 +126,24 @@ const WorkExperience = () => {
                     icon: <Shield className="w-4 h-4" />,
                     text: "Explored techniques to transform raw data into actionable business insights."
                 },
-                /* {
-                    icon: <FileText className="w-4 h-4" />,
-                    text: <>
-                        Authored comprehensive and easy-to-follow{" "}
-                        <a
-                            href="https://docs.reverieinc.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
-                        >
-                            Reverie's API documentation
-                        </a>{" "}
-                        using Mintlify, ensuring smooth onboarding and integration for developers through clear examples and structured content.
-                    </>
-                }, */
                 {
                     icon: <BarChart3 className="w-4 h-4" />,
                     text: "Strengthened understanding of data visualization and decision-making using Power BI tools."
                 }
             ]
         },
-          {
+        {
             company: "Scaler Topics",
             role: "Completed Python and SQL for Data Science",
             duration: "May 2024 – July 2024",
             type: "Bhubaneswar, Odisha, India",
             logo: "https://pbs.twimg.com/profile_images/1439832757761306631/zWTKZBLb_400x400.png",
             color: "bg-blue-500",
+            certificateUrl: "https://moonshot.scaler.com/s/sl/cQClo9wVjJ",
             achievements: [
                 {
                     icon: <Wrench className="w-4 h-4" />,
-                    text: <>
-                        Completed an industry-oriented course focused on{" "}
-                        <a
-                            href="https://moonshot.scaler.com/s/sl/cQClo9wVjJ?_gl=1*ztdxwq*_gcl_aw*R0NMLjE3MTQzMTc0NjMuQ2p3S0NBanc1N2V4QmhBc0Vpd0FhSXhhWnZBUHZlSUFQcENpX2FDdUJVMUZ3TE0xTFlyRjhjQjdwRENnUFA5dUJmZFhQaFRSUldRa3Zob0NTTUlRQXZEX0J3RQ..*_gcl_au*MTk3Mjk5NTcyNi4xNzIxODc5MDMx*FPAU*NjE5OTUxOTQzLjE3MjA3ODUxNzE.*_ga*MTMyMjE0MjgwNC4xNzEyOTg5NDAz*_ga_53S71ZZG1X*MTcyMTg3OTAzMS43OC4xLjE3MjE4NzkwNTkuMC4wLjUzNjI0ODAwMA"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
-                        >
-                            Python programming and SQL for Data Science
-                        </a>{" "}
-                        .
-                    </>
+                    text: "Completed an industry-oriented course focused on Python programming and SQL for Data Science."
                 },
                 {
                     icon: <Code className="w-4 h-4" />,
@@ -187,23 +155,8 @@ const WorkExperience = () => {
                 },
                 {
                     icon: <Shield className="w-4 h-4" />,
-                    text: "Addressed critical VAPT (Vulnerability Assessment and Penetration Testing) issues in RevUp, significantly improving the product's security and compliance standards"
+                    text: "Addressed critical VAPT issues, significantly improving security and compliance standards"
                 },
-                /* {
-                    icon: <FileText className="w-4 h-4" />,
-                    text: <>
-                        Authored comprehensive and easy-to-follow{" "}
-                        <a
-                            href="https://docs.reverieinc.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
-                        >
-                            Reverie's API documentation
-                        </a>{" "}
-                        using Mintlify, ensuring smooth onboarding and integration for developers through clear examples and structured content.
-                    </>
-                }, */
                 {
                     icon: <BarChart3 className="w-4 h-4" />,
                     text: "Strengthened foundational knowledge essential for data-driven decision-making and machine learning applications."
@@ -214,13 +167,14 @@ const WorkExperience = () => {
             company: "NASSCOM",
             role: "Certificate of Big Data",
             duration: "Nov 2023 – Dec 2023",
-            type: "Khordha, West Bengal, India",
+            type: "Kolkata, West Bengal, India",
             logo: "https://nasscom.in/themes/custom/nasscomredesigntheme/images/logo.svg",
             color: "bg-green-500",
+            certificateUrl: null,
             achievements: [
                 {
                     icon: <Database className="w-4 h-4" />,
-                    text: "Collect, validate, and manage data from field and system sources to support monitoring of many big data of various e-commerce platform."
+                    text: "Collect, validate, and manage data from field and system sources to support monitoring of big data from various e-commerce platforms."
                 },
                 {
                     icon: <BarChart4 className="w-4 h-4" />,
@@ -240,28 +194,18 @@ const WorkExperience = () => {
                 }
             ]
         },
-          {
+        {
             company: "Technoxian World Robotic Championship",
             role: "2nd Runner Up Drone Competition",
             duration: "July 2023",
             type: "Noida, Uttar Pradesh, India",
             logo: "https://www.technoxian.com/images/technoxian-social.png",
             color: "bg-blue-500",
+            certificateUrl: "https://revup.reverieinc.com",
             achievements: [
                 {
                     icon: <Wrench className="w-4 h-4" />,
-                    text: <>
-                        Secured{" "}
-                        <a
-                            href="https://revup.reverieinc.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
-                        >
-                            2nd Runner-Up
-                        </a>{" "}
-                        in the prestigious Technoxian World Robotics Championship held in Noida, 2023.
-                    </>
+                    text: "Secured 2nd Runner-Up in the prestigious Technoxian World Robotics Championship held in Noida, 2023."
                 },
                 {
                     icon: <Code className="w-4 h-4" />,
@@ -275,49 +219,24 @@ const WorkExperience = () => {
                     icon: <Shield className="w-4 h-4" />,
                     text: "Successfully designed, programmed, and executed drone challenges under international competition standards."
                 },
-                /* {
-                    icon: <FileText className="w-4 h-4" />,
-                    text: <>
-                        Authored comprehensive and easy-to-follow{" "}
-                        <a
-                            href="https://docs.reverieinc.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
-                        >
-                            Reverie's API documentation
-                        </a>{" "}
-                        using Mintlify, ensuring smooth onboarding and integration for developers through clear examples and structured content.
-                    </>
-                }, */
                 {
                     icon: <BarChart3 className="w-4 h-4" />,
                     text: "Gained valuable experience in robotics, automation, and real-time problem solving on a global platform."
                 }
             ]
         },
-          {
+        {
             company: "Edu Fabrica",
             role: "Student",
             duration: "July 2022",
             type: "IIT Bhubaneswar, Odisha, India",
-            logo: "https://edufabrica.net/_next/static/media/Logo.6324fde1.jpg",
+            logo: "https://cdn.octopix.in/uploads/company-logo/2020/02/15/edufabrica-s6EKzUopjyeTeTxOH2xmSlVBaufK8lQmBTJGm9LkvbqZwkfmyEEKAJiOQsOur0eLqmw7CzGGc6Qnryvw-350x350.jpg",
             color: "bg-blue-500",
+            certificateUrl: "https://fsp-assessment-certificates.s3-ap-southeast-1.amazonaws.com/DebaneekChhotaray-126356375.pdf",
             achievements: [
                 {
                     icon: <Wrench className="w-4 h-4" />,
-                    text: <>
-                        Completed a comprehensive {" "}
-                        <a
-                            href="https://fsp-assessment-certificates.s3-ap-southeast-1.amazonaws.com/DebaneekChhotaray-126356375.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
-                        >
-                            Data Science course
-                        </a>{" "}
-                        conducted by IIT Bhubaneswar in collaboration with Edu Fabrica.
-                    </>
+                    text: "Completed a comprehensive Data Science course conducted by IIT Bhubaneswar in collaboration with Edu Fabrica."
                 },
                 {
                     icon: <Code className="w-4 h-4" />,
@@ -331,24 +250,9 @@ const WorkExperience = () => {
                     icon: <Shield className="w-4 h-4" />,
                     text: "Worked on hands-on projects that strengthened analytical and problem-solving skills."
                 },
-                /* {
-                    icon: <FileText className="w-4 h-4" />,
-                    text: <>
-                        Authored comprehensive and easy-to-follow{" "}
-                        <a
-                            href="https://docs.reverieinc.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
-                        >
-                            Reverie's API documentation
-                        </a>{" "}
-                        using Mintlify, ensuring smooth onboarding and integration for developers through clear examples and structured content.
-                    </>
-                } */,
                 {
                     icon: <BarChart3 className="w-4 h-4" />,
-                    text: "Collaborated in the development of an Admin Dashboard that provides detailed visualizations of user activity, system performance, and usage analytics to support better decision-making"
+                    text: "Collaborated in the development of an Admin Dashboard with detailed visualizations of user activity, system performance, and usage analytics."
                 }
             ]
         },
@@ -362,14 +266,12 @@ const WorkExperience = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900 relative overflow-hidden">
-            {/* Animated Binary Background */}
             <canvas
                 ref={canvasRef}
                 className="absolute inset-0 opacity-30"
                 style={{ zIndex: 0 }}
             />
 
-            {/* Code Grid Pattern Overlay */}
             <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ zIndex: 1 }}>
                 <div className="absolute inset-0" style={{
                     backgroundImage: `
@@ -380,24 +282,15 @@ const WorkExperience = () => {
                 }}></div>
             </div>
 
-            {/* Animated Gradient Orbs */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 1 }}>
                 <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
             </div>
-
             <Navbar />
 
             <div className="relative z-10 max-w-5xl mx-auto pt-24 pb-12 px-4 sm:px-6 lg:px-8">
-                {/* Header */}
                 <div className={`text-center mb-16 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                   {/*  <div className="inline-flex items-center gap-2 bg-slate-800/80 backdrop-blur-sm border border-cyan-500/30 text-cyan-400 px-4 py-2 rounded-lg text-sm font-mono mb-6 shadow-lg shadow-cyan-500/20">
-                        <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></div>
-                        <Briefcase className="w-4 h-4" />
-                        <span className="text-emerald-400">$</span>
-                        <span>work_experience</span>
-                    </div> */}
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
                         <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
                             Certificates
@@ -408,17 +301,14 @@ const WorkExperience = () => {
                     </p>
                 </div>
 
-                {/* Timeline Container */}
                 <div className={`relative transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500/50 via-blue-500/50 to-purple-500/50 md:left-8"></div>
 
                     <div className="space-y-12">
                         {workExperiences.map((experience, index) => (
                             <div key={index} className="relative group">
-                                {/* Timeline Dot */}
                                 <div className="absolute left-3 w-6 h-6 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full border-4 border-slate-900 shadow-lg shadow-cyan-500/50 z-10 md:left-5 group-hover:scale-125 transition-transform duration-300"></div>
 
-                                {/* Experience Card */}
                                 <div className="ml-12 md:ml-16">
                                     <div className="bg-slate-800/60 backdrop-blur-sm rounded-xl border border-slate-700/50 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 group">
                                         <div className="p-6 pb-4">
@@ -426,32 +316,18 @@ const WorkExperience = () => {
                                                 <div className="flex-1">
                                                     <div className="flex items-center gap-4 mb-4">
                                                         <div className="w-12 h-12 rounded-lg overflow-hidden bg-slate-700/50 border border-slate-600/50 flex items-center justify-center p-2">
-                                                            {experience.company === "KPMG India" ? (
-                                                                <img
-                                                                    src={experience.logo}
-                                                                    alt={`${experience.company} Logo`}
-                                                                    className="w-full h-full object-cover"
-                                                                />
-                                                            ) : (
-                                                                <img
-                                                                    src={experience.logo}
-                                                                    alt={`${experience.company} Logo`}
-                                                                    className="w-full h-full object-contain"
-                                                                />
-                                                            )}
+                                                            <img
+                                                                src={experience.logo}
+                                                                alt={`${experience.company} Logo`}
+                                                                className="w-full h-full object-contain"
+                                                            />
                                                         </div>
 
                                                         <div>
                                                             <h3 className="text-xl font-bold text-white mb-1">{experience.role}</h3>
-                                                            <a
-                                                                href={experience.company === "KPMG India" ? "https://home.kpmg/in/en/home.html" : "https://www.reverieinc.com"}
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                className="text-lg text-cyan-400 font-semibold hover:text-cyan-300 transition-colors inline-flex items-center gap-1 group/link"
-                                                            >
+                                                            <p className="text-lg text-cyan-400 font-semibold">
                                                                 {experience.company}
-                                                                <span className="text-xs opacity-0 group-hover/link:opacity-100 transition-opacity">↗</span>
-                                                            </a>
+                                                            </p>
                                                         </div>
                                                     </div>
 
@@ -464,12 +340,21 @@ const WorkExperience = () => {
                                                             <MapPin className="w-4 h-4 text-cyan-400" />
                                                             <span className="font-mono">{experience.type}</span>
                                                         </div>
+                                                        {experience.certificateUrl && (
+                                                            <button
+                                                                onClick={() => handleViewCertificate(experience.certificateUrl)}
+                                                                className="flex items-center gap-2 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-400 px-3 py-1.5 rounded-lg border border-cyan-500/50 hover:border-cyan-400 transition-all duration-200 font-mono text-xs cursor-pointer"
+                                                            >
+                                                                <FileText className="w-4 h-4" />
+                                                                View Certificate
+                                                                <ExternalLink className="w-3 h-3" />
+                                                            </button>
+                                                        )}
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        {/* Achievements */}
                                         <div className="px-6 pb-6">
                                             <div className="mb-3">
                                                 <span className="text-xs text-slate-400 font-mono uppercase tracking-wider">Achievements</span>
@@ -494,7 +379,6 @@ const WorkExperience = () => {
                     </div>
                 </div>
 
-                {/* Skills Section */}
                 <div className={`mt-12 bg-slate-800/60 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '400ms' }}>
                     <h3 className="text-lg font-bold text-white mb-6 text-center">
                         <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -512,12 +396,6 @@ const WorkExperience = () => {
                         ))}
                     </div>
                 </div>
-
-                {/* Internship Certificate Section */}
-
-
-                {/* Certificate Modal */}
-
             </div>
         </div>
     );
